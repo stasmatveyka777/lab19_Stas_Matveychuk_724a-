@@ -1,6 +1,4 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
 
 template <typename T>
 void sortThree(T& a, T& b, T& c) {
@@ -15,17 +13,15 @@ int main() {
     sortThree(x, y, z);
     std::cout << "After sorting: " << x << ", " << y << ", " << z << std::endl;
 
-    std::vector<int> values = {x, y, z};
-    std::cout << "Vector contents: ";
-    for (const auto& val : values) {
-        std::cout << val << " ";
-    }
-    std::cout << std::endl;
-
-    std::string a = "banana", b = "apple", c = "cherry";
+    double a = 5.3, b = 1.1, c = 9.9;
     std::cout << "Before sorting: " << a << ", " << b << ", " << c << std::endl;
     sortThree(a, b, c);
     std::cout << "After sorting: " << a << ", " << b << ", " << c << std::endl;
+
+    std::string s1 = "banana", s2 = "apple", s3 = "cherry";
+    std::cout << "Before sorting: " << s1 << ", " << s2 << ", " << s3 << std::endl;
+    sortThree(s1, s2, s3);
+    std::cout << "After sorting: " << s1 << ", " << s2 << ", " << s3 << std::endl;
 
     return 0;
 }
